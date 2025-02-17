@@ -1,13 +1,74 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + TS</title>
-  </head>
-  <body>
-    <div id="app"></div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Введение в JS</title>
+</head>
+<body>
+
+    <div id="JS_urok1">
+        <p>//! 1. Запросите у пользователя его имя и выведите в ответ: «Привет, его имя!».</p>
+
+        <div>// let x = prompt("Enter your name: ")</div>
+        <div>// alert("Your name: " + x)</div>
+
+        <p>//! 2. Запросите у пользователя год его рождения, посчитайте,
+            //! сколько ему лет и выведите результат. Текущий год укажите
+            //! в коде как константу.</p>
+
+        <div>// const year = 2025</div>
+        <div>// let user_old = +prompt("Enter your year of birth: ")</div>
+        <div>// alert("Your are " + (year - user_old) + " years old")</div>
+
+        <p>//! 3. Запросите у пользователя длину стороны квадрата и выведите периметр такого квадрата.</p>
+
+        <div>// let d = +prompt("Enter the of square side: ")</div>
+        <div>// let P = d*4</div>
+        <div>// alert("square P = " + P)</div>
+
+        <p>//! 4. Запросите у пользователя радиус окружности и выведите площадь такой окружности.</p>
+
+        <div>// let r = +prompt("Enter the radius circle: ")</div>
+        <div>// let pi = 3.14</div>
+        <div>// let S = pi*r**2</div>
+        <div>// alert("cricle S = " + S)</div>
+
+        <p>//! 5. Запросите у пользователя расстояние в км между двумя городами и за сколько часов он
+            //! хочет добраться. Посчитайте скорость, с которой необходимо двигаться, чтобы успеть вовремя.</p>
+
+        <div>// let s = +prompt("Введите расстояние между городами (в км): ")</div>
+        <div>// let t = +prompt("За сколько часов вы хотите преодолеть это расстояние?: ")</div>
+        <div>// let u = s/t</div>
+        <div>// alert("Чтобы преодолеть расстояние " + s + "км" + " за " + t + " часов, вам необходимо двигаться со скоростью: " + u + "км/ч")</div>
+
+        <p>//! 6. Реализуйте конвертор валют. Пользователь вводит доллары, программа переводит в евро. 
+            //! Курс валюты храните в константе.</p>
+
+        <div>// const usd_eur = 0.95</div>
+        <div>// let user_money = +prompt("Сколько $ в € вы хотите обменять?: ")</div>
+        <div>// alert("Вы получите: " + user_money*usd_eur + " евро")</div>
+
+        <p>//! 7. Пользователь указывает объем флешки в Гб. Программа должна посчитать сколько 
+            //! файлов размером в 820 Мб помещается на флешку.</p>
+
+        <div>// let user_usb = prompt("Укажите объем флешки в Гб: ") <span>//! Не менял тип данных - отработало корректно</span></div>
+        <div>// let user_file = prompt("Укажите размер файла в Мб") <span>//! Не менял тип данных - отработало корректно</span></div>
+        <div>// let usb = user_usb*1024</div>
+        <div>// alert(parseInt(usb/user_file) + " файлов размером в " + user_file + "Мб поместятся на флешку объемом в " + user_usb + "Гб")</div>
+
+        <p>//! 8. Пользователь вводит сумму денег в кошельке и цену одной шоколадки. Программа выводит 
+            //! сколько шоколадок может купить пользователь и сколько сдачи у него останется.</p>
+
+        <div>let user_money = prompt("Введите количество денежных средств в вашем кошелье (в рублях): ")</div>
+        <div>let price_chocolate = prompt("Введите цену одной шоколадки, которую вы желаете купить: ")</div>
+        <div>let sale_choco = parseInt(user_money/price_chocolate)</div>
+        <div>let money_after = user_money - sale_choco * price_chocolate</div>
+        <div>alert("На сумму: " + user_money + " рублей вы сможете купить - " + sale_choco + " шоколадок. При этом у вас останется: " + money_after + " рублей")</div>
+    </div>
+ 
+
     <script type="module" src="/src/main.ts"></script>
-  </body>
+</body>
 </html>
