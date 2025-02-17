@@ -1,0 +1,13 @@
+#JS_urok1{
+    padding: 20px;
+    padding-left: 40px;
+    font-size: 20px;
+}
+
+#JS_urok1 p, #JS_urok1 span{
+    color: brown;
+}
+
+#JS_urok1 div{
+    color: green;
+}
