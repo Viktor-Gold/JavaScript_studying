@@ -1,7 +1,23 @@
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+body{
+    margin: 0;
+}
+
+#typeScript{
+    background-color: black;
+    color: white;
+    padding: 20px;
+    padding-left: 40px;
+}
+
+#typeScript div{
+    color: green;
+}
+
+#typeScript p{
+    color: brown;
+}
+
+#urok2{
+    color: gold;
+    text-shadow: 1px 1px 10px gold;
 }

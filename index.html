@@ -1,74 +1,137 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Введение в JS</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="stylesheet" href="src/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + TS</title>
+  </head>
+  <body>
+    <div id="typeScript">
+      <p>//! 1. Запросите у пользователя его имя и выведите в ответ: «Привет, его имя!».</p>
 
-    <div id="JS_urok1">
-        <p>//! 1. Запросите у пользователя его имя и выведите в ответ: «Привет, его имя!».</p>
+      <div>
+        // let x = prompt("Enter your name: ") <br>
+        // alert("Your name: " + x)
+      </div>
 
-        <div>// let x = prompt("Enter your name: ")</div>
-        <div>// alert("Your name: " + x)</div>
+      <p>//! 2. Запросите у пользователя год его рождения, посчитайте,
+        //! сколько ему лет и выведите результат. Текущий год укажите
+        //! в коде как константу.</p>
 
-        <p>//! 2. Запросите у пользователя год его рождения, посчитайте,
-            //! сколько ему лет и выведите результат. Текущий год укажите
-            //! в коде как константу.</p>
+      <div>
+        // const year = 2025 <br>
+        // let user_old = +prompt("Enter your year of birth: ") <br>
+        // alert("Your are " + (year - user_old) + " years old") <br>
+      </div>
 
-        <div>// const year = 2025</div>
-        <div>// let user_old = +prompt("Enter your year of birth: ")</div>
-        <div>// alert("Your are " + (year - user_old) + " years old")</div>
+      <p>//! 3. Запросите у пользователя длину стороны квадрата и выведите периметр такого квадрата.</p>
 
-        <p>//! 3. Запросите у пользователя длину стороны квадрата и выведите периметр такого квадрата.</p>
+      <div>// let d = +prompt("Enter the of square side: ") <br>
+          // let P = d*4 <br>
+          // alert("square P = " + P)</div>
 
-        <div>// let d = +prompt("Enter the of square side: ")</div>
-        <div>// let P = d*4</div>
-        <div>// alert("square P = " + P)</div>
+      <p>//! 4. Запросите у пользователя радиус окружности и выведите площадь такой окружности.</p>
 
-        <p>//! 4. Запросите у пользователя радиус окружности и выведите площадь такой окружности.</p>
+     <div>// let r = +prompt("Enter the radius circle: ")</div>
+      <div>// let S = Math.PI*r**2</div>
+      <div>// alert("circle S = " + S)</div>
 
-        <div>// let r = +prompt("Enter the radius circle: ")</div>
-        <div>// let pi = 3.14</div>
-        <div>// let S = pi*r**2</div>
-        <div>// alert("cricle S = " + S)</div>
+      <p>//! 5. Запросите у пользователя расстояние в км между двумя городами и за сколько часов он
+        //! хочет добраться. Посчитайте скорость, с которой необходимо двигаться, чтобы успеть вовремя.</p>
 
-        <p>//! 5. Запросите у пользователя расстояние в км между двумя городами и за сколько часов он
-            //! хочет добраться. Посчитайте скорость, с которой необходимо двигаться, чтобы успеть вовремя.</p>
+      <div>// let s = +prompt("Введите расстояние между городами (в км): ")</div>
+      <div>// let t = +prompt("За сколько часов вы хотите преодолеть это расстояние?: ")</div>
+      <div>// let u = s/t</div>
+      <div>// alert("Чтобы преодолеть расстояние " + s + "км" + " за " + t + " часов, вам необходимо двигаться со скоростью: " + u + "км/ч")</div>
 
-        <div>// let s = +prompt("Введите расстояние между городами (в км): ")</div>
-        <div>// let t = +prompt("За сколько часов вы хотите преодолеть это расстояние?: ")</div>
-        <div>// let u = s/t</div>
-        <div>// alert("Чтобы преодолеть расстояние " + s + "км" + " за " + t + " часов, вам необходимо двигаться со скоростью: " + u + "км/ч")</div>
+     <p> //! 6. Реализуйте конвертор валют. Пользователь вводит доллары, программа переводит в евро. 
+      //! Курс валюты храните в константе.</p>
 
-        <p>//! 6. Реализуйте конвертор валют. Пользователь вводит доллары, программа переводит в евро. 
-            //! Курс валюты храните в константе.</p>
+      <div>// const usd_eur = 0.95</div>
+      <div>// let user_money = +prompt("Сколько $ в € вы хотите обменять?: ")</div>
+      <div>// alert("Вы получите: " + user_money*usd_eur + " евро")</div>
 
-        <div>// const usd_eur = 0.95</div>
-        <div>// let user_money = +prompt("Сколько $ в € вы хотите обменять?: ")</div>
-        <div>// alert("Вы получите: " + user_money*usd_eur + " евро")</div>
+      <p>//! 7. Пользователь указывает объем флешки в Гб. Программа должна посчитать сколько 
+        //! файлов размером в 820 Мб помещается на флешку.</p>
 
-        <p>//! 7. Пользователь указывает объем флешки в Гб. Программа должна посчитать сколько 
-            //! файлов размером в 820 Мб помещается на флешку.</p>
+      <div>// let user_usb = Number(prompt("Укажите объем флешки в Гб: ")) //! Не менял тип данных - отработало корректно</div>
+      <div>// let user_file = parseInt(prompt("Укажите размер файла в Мб")) //! Не менял тип данных - отработало корректно</div>
+      <div>// let usb = user_usb*1024</div>
+      <div>// alert(parseInt(usb/user_file) + " файлов размером в " + user_file + "Мб поместятся на флешку объемом в " + user_usb + "Гб")</div>
 
-        <div>// let user_usb = prompt("Укажите объем флешки в Гб: ") <span>//! Не менял тип данных - отработало корректно</span></div>
-        <div>// let user_file = prompt("Укажите размер файла в Мб") <span>//! Не менял тип данных - отработало корректно</span></div>
-        <div>// let usb = user_usb*1024</div>
-        <div>// alert(parseInt(usb/user_file) + " файлов размером в " + user_file + "Мб поместятся на флешку объемом в " + user_usb + "Гб")</div>
+      <p>//! 8. Пользователь вводит сумму денег в кошельке и цену одной шоколадки. Программа выводит 
+        //! сколько шоколадок может купить пользователь и сколько сдачи у него останется.</p>
 
-        <p>//! 8. Пользователь вводит сумму денег в кошельке и цену одной шоколадки. Программа выводит 
-            //! сколько шоколадок может купить пользователь и сколько сдачи у него останется.</p>
+      <div>// let user_money = prompt("Введите количество денежных средств в вашем кошелье (в рублях): ");</div>
+      <div>// let price_chocolate = prompt("Введите цену одной шоколадки, которую вы желаете купить: ");</div>
+      <div>// let sale_choco = parseInt(user_money/price_chocolate);</div>
+      <div>// let money_after = user_money - sale_choco * price_chocolate;</div>
+      <div>// alert("На сумму: " + user_money + " рублей вы сможете купить - " + sale_choco + " шоколадок. При этом у вас останется: " + money_after + " рублей");</div>
 
-        <div>let user_money = prompt("Введите количество денежных средств в вашем кошелье (в рублях): ")</div>
-        <div>let price_chocolate = prompt("Введите цену одной шоколадки, которую вы желаете купить: ")</div>
-        <div>let sale_choco = parseInt(user_money/price_chocolate)</div>
-        <div>let money_after = user_money - sale_choco * price_chocolate</div>
-        <div>alert("На сумму: " + user_money + " рублей вы сможете купить - " + sale_choco + " шоколадок. При этом у вас останется: " + money_after + " рублей")</div>
+
+      <p id="urok2" style="color: gold;">//! Urok 2 </p>
+
+      <p>//! 1. Запросите у пользователя число, возведите это число во 2-ю степень и выведите на экран</p>
+
+      <div>// let num_1 = prompt("Введите число, которое нужно возвести во 2-ую степень: ");</div>
+      <div>// alert("Результат: " + (num_1**2));</div>
+      
+      <p>//! 2. Запросите у пользователя 2 числа и выведите среднее арифметическое этих чисел.</p>
+
+      <div>// let num_1 = +prompt("Введите первое число: ");</div>
+      <div>// let num_2 = +prompt("Введите второе число: ");</div>
+      <div>// let average = (num_1 + num_2) / 2;</div>
+      <div>// alert("Среднее арифмитическое числа " + num_1 + " и " + num_2 + " = " + average);</div>
+
+      <p>//! 3. Запросите у пользователя длину стороны квадрата и выведите площадь такого квадрата.</p>
+
+      <div>// let side_square = prompt("Введите длинну одной стороны квадрата: ");</div>
+      <div>// alert("Площадь квадрата равна: " + (side_square*4));</div>
+
+      <p>//! 4. Реализуйте конвертор из километров в мили (пользователь вводит километры, программа 
+        //! выводит мили). 1 км = 0,621371 миль. Это значение укажите в коде как константу</p>
+
+      <div>// let kilometer = prompt("Введите количество километров: ")</div>
+      <div>// const mili = kilometer * 0.621371</div>
+      <div>// alert(kilometer + "км = " + mili + "миль")</div>
+
+      <p>//! 5. Реализуйте калькулятор. Пользователь вводит два числа, а программа а выводит 
+        //! результаты действий + - * / между этими числами.</p>
+
+      <div>// let num_1 = +prompt("Введите первое число: ");</div>
+      <div>// let num_2 = +prompt("Введите второе число: ");</div>
+      <div>// let result = null;</div>
+      <div>// let operator = prompt("Выберите действие: (+; -; *; /)");</div>
+
+      <div>// if (operator == "+") {</div>
+      <div>//     alert("Ваше число: " + (result = num_1 + num_2));</div>
+      <div>// }</div>
+      
+      <div>// if (operator == "-") {</div>
+      <div>//     alert("Ваше число: " + (result = num_1 - num_2));</div>
+      <div>// }</div>
+      
+      <div>// if (operator == "*") {</div>
+      <div>//     alert("Ваше число: " + (result = num_1 * num_2));</div>
+      <div>// }</div>
+      
+      <div>// if (operator == "/") {</div>
+      <div>//     alert("Ваше число: " + (result = num_1 / num_2));</div>
+      <div>// }</div>
+      
+      <p>//! 6. Пользователь вводит значения a и b для формулы a * x + b = 0,
+        //! а программа считает и выводит значение x.</p>
+      
+      <div>// let a = +prompt("Чтобы найти значение 'x' в уравнении: a*x+b=0 сначала введите значение 'a': ")</div>
+      <div>// let b = +prompt("Теперь введите значение 'b': ")</div>
+      <div>// let x = -b / a</div>
+      <div>// alert("'x' = " + x)</div>
+      
+      <p>//! 7. Запросите у пользователя текущее время (часы и минуты) и выведите, 
+        //! сколько часов и минут осталось до следующего дня.</p>
     </div>
- 
-
     <script type="module" src="/src/main.ts"></script>
-</body>
+  </body>
 </html>
