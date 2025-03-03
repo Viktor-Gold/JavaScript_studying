@@ -90,8 +90,8 @@ import './style.css'
 //! 5. Реализуйте калькулятор. Пользователь вводит два числа, а программа а выводит 
 //! результаты действий + - * / между этими числами.
 
-// let num_1 = +prompt("Введите первое число: ");
-// let num_2 = +prompt("Введите второе число: ");
+// let num_1 = Number(prompt("Введите первое число: "));
+// let num_2 = Number(prompt("Введите первое число: "));
 // let result = null;
 // let operator = prompt("Выберите действие: (+; -; *; /)");
 
@@ -395,9 +395,8 @@ import './style.css'
 //! За каждый правильный ответ начисляется 2 балла. 
 //! После вопросов выведите пользователю количество набранных баллов.
 
-// let result
 // let score = 0
-// let quest1 = prompt("В каком году основан JavaScript?: 1990; 1995; 1999?")
+// let quest1 = Number(prompt("В каком году основан JavaScript?: 1990; 1995; 1999?"));
 // let quest2
 // let quest3
 
@@ -515,7 +514,25 @@ import './style.css'
 //     alert("Введите корректное цифру: ") //! Нулевой или отрицательный день
 // }
 
-// //! Полсдений день 30-дневных месяцев
+// //! Последний день февраля високосного и не високосного года 
+// else if (day == 28){
+//     month = Number(prompt("Введите месяц (цифра): "))
+//     if (month == 2){
+//         year = Number(prompt("Введите год: "))
+//         if (year %4!=0){
+//             day = 1
+//             month = 3
+//             alert("Завтра: " + day + "." + month + "." + year)
+//         }
+//         else if (year %4==0){
+//             day += 1
+//             alert("Завтра: " + day + "." + month + "." + year)
+//         }
+//         else (alert("Введите корректный год"))
+//     }
+// }
+
+// //! Последний день 30-дневных месяцев
 // else if (day == 30) {
 //     day = 1
 //     month = Number(prompt("Введите месяц (цифра): "))
@@ -572,7 +589,7 @@ import './style.css'
 //     else (alert("Введите корректный месяц"))
 // }
 
-// //! Полсдений день 31-дневных месяцев
+// //! Последний день 31-дневных месяцев
 // else if (day == 31) {
 //     day = 1
 //     month = Number(prompt("Введите месяц (цифра): "))
@@ -736,6 +753,50 @@ import './style.css'
 //     alert("Ваше число: " + (result = num_1 * num_2));
 // }
 
-// if (operator == "/") {
+//  if (operator == "/") {
 //     alert("Ваше число: " + (result = num_1 / num_2));
 // }
+
+
+// ! Тернарный оператор
+// let num_1 = 5
+// let num_2 = 7
+// console.log(num_1>num_2 ? num_1 : num_2);
+
+// let h = 12
+// h%5==0 ? console.log("Число " + h + " кратно 5") : console.log("Число " + h + " не кратно 5");
+
+// ! Циклы
+// let i = 0
+// console.log(i);
+
+// while (i<5) {
+//     console.log(i);
+//     i++  
+// }
+
+// console.log("================");
+
+// let y = 5
+// while (y > 0) {
+//     console.log(y);
+//     y--
+    
+// }
+
+// do while (condition) {
+    
+// }
+
+//  (  Началo; условие; шаг)
+// for (let i = 0; i < 10; i++) {
+//     if (i%2==1) {
+//         console.log(i);
+//     }
+// }
+
+let number = 123
+console.log(number.toString().length);
+
+
+
