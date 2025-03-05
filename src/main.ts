@@ -795,8 +795,88 @@ import './style.css'
 //     }
 // }
 
-let number = 123
-console.log(number.toString().length);
+// let number = 123
+// console.log(number.toString().length);
 
+//! 1 task
+let num = 10
+let str = ""
+while (num>0) {
+    num--
+    str += "#"
+}
+console.log(str);
 
+//! 2 task
+let user_num = 10;
+let diapazone = ""
+while (user_num >= 0) {
+    diapazone += user_num
+    console.log(diapazone);
+    user_num--
+}
+
+//! 3 task
+let num_3 = 5
+let pow = 3
+
+while (pow>0) {
+    num_3**pow
+    console.log(num_3**pow);
+    pow--
+}
+
+//! 4 task
+console.clear()
+let num_4 = 25
+let num_5 = 10
+let devider = num_5
+while (devider>0) {
+    if (num_4 % devider == 0 && num_5 % devider == 0){
+        console.log(devider);
+    }
+    devider--
+}
+
+//! 5 task
+let num6 = 5
+let factorial = 1
+while (num6>0) {
+    factorial *= num6
+    console.log(factorial);
+    num6--
+}
+console.clear()
+//1*5 5*4 20*3 60*2 120*1 
+
+// Числа от 0 до 100 кратные числу введенные пользователем
+// let n = 5
+// for (let i = 0; i < 100;  i++) {
+//     if (i%n == 0) {
+//         console.log(i);
+//     }
+// }
+
+// task 4
+// let minNum = 10
+// let maxNum = 50
+// let string = ""
+
+// for (let i = minNum; i < maxNum; i+=4) {
+//     console.log(i);
+// }
+
+// task 5
+ let y = 49
+ let count = 0
+ for (let i = 2; i < y; i++) {
+    if (y%i==0){
+        console.log(i);
+        console.log("Число простое");
+    }
+    else {
+        count++
+        console.log("else");
+    }
+ }
 
