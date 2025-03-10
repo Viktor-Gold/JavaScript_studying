@@ -799,54 +799,54 @@ import './style.css'
 // console.log(number.toString().length);
 
 //! 1 task
-let num = 10
-let str = ""
-while (num>0) {
-    num--
-    str += "#"
-}
-console.log(str);
+// let num = 10
+// let str = ""
+// while (num>0) {
+//     num--
+//     str += "#"
+// }
+// console.log(str);
 
 //! 2 task
-let user_num = 10;
-let diapazone = ""
-while (user_num >= 0) {
-    diapazone += user_num
-    console.log(diapazone);
-    user_num--
-}
+// let user_num = 10;
+// let diapazone = ""
+// while (user_num >= 0) {
+//     diapazone += user_num
+//     console.log(diapazone);
+//     user_num--
+// }
 
 //! 3 task
-let num_3 = 5
-let pow = 3
+// let num_3 = 5
+// let pow = 3
 
-while (pow>0) {
-    num_3**pow
-    console.log(num_3**pow);
-    pow--
-}
+// while (pow>0) {
+//     num_3**pow
+//     console.log(num_3**pow);
+//     pow--
+// }
 
 //! 4 task
-console.clear()
-let num_4 = 25
-let num_5 = 10
-let devider = num_5
-while (devider>0) {
-    if (num_4 % devider == 0 && num_5 % devider == 0){
-        console.log(devider);
-    }
-    devider--
-}
+// console.clear()
+// let num_4 = 25
+// let num_5 = 10
+// let devider = num_5
+// while (devider>0) {
+//     if (num_4 % devider == 0 && num_5 % devider == 0){
+//         console.log(devider);
+//     }
+//     devider--
+// }
 
 //! 5 task
-let num6 = 5
-let factorial = 1
-while (num6>0) {
-    factorial *= num6
-    console.log(factorial);
-    num6--
-}
-console.clear()
+// let num6 = 5
+// let factorial = 1
+// while (num6>0) {
+//     factorial *= num6
+//     console.log(factorial);
+//     num6--
+// }
+
 //1*5 5*4 20*3 60*2 120*1 
 
 // Числа от 0 до 100 кратные числу введенные пользователем
@@ -867,16 +867,169 @@ console.clear()
 // }
 
 // task 5
- let y = 49
- let count = 0
- for (let i = 2; i < y; i++) {
-    if (y%i==0){
-        console.log(i);
-        console.log("Число простое");
-    }
-    else {
-        count++
-        console.log("else");
-    }
- }
+//  let y = 49
+//  let count = 0
+//  for (let i = 2; i < y; i++) {
+//     if (y%i==0){
+//         console.log(i);
+//         console.log("Число простое");
+//     }
+//     else {
+//         count++
+//         console.log("else");
+//     }
+//  }
 
+//! Task 1
+// let userNum1 = 5
+// let userNum2 = 20
+// let acc = 0
+// for (let i = userNum1; i < userNum2; i++) {
+//     acc+=i
+//     console.log(acc);
+// }
+
+//! Task 2
+// let first_num = 20
+// let second_num = 4000
+// let massive = []
+// for (let i = 1; i < second_num; i++) {
+//     if (second_num%i==0 && first_num%i==0)
+//     massive.push(i)
+// }
+// console.log(Math.max(...massive));
+// console.log(massive[massive.length-1]);
+// console.log(massive.pop());
+
+//! Task 3
+// let user_number = 50
+// let array = []
+// for (let i = 0; i < user_number; i++) {
+//     if (user_number%i==0) {
+//         array.push(i)
+//     }    
+// }
+// console.log(array);
+
+//! Task 4
+// let userNum3 = 1234567 as any
+// // console.log(userNum3.toString().length);
+// userNum3 = "123456789"
+// let accum = 0
+// for (let i = 0; i < userNum3.length; i++) {
+//     accum++
+// }
+// console.log(accum);
+
+//! Task 5
+// let mass = [1, 5, 4, 6, -1, -9, 10, -8, 0, 3]
+// // console.log(mass[mass.length-1]);
+// let pos = 0
+// let neg = 0
+// let zero = 0
+// let odd = 0
+// let even = 0
+
+// for (let i = 0; i < mass.length; i++) {
+//     if (mass[i]>0) {
+//         pos++
+//         console.log(mass[i]);       
+//     }   
+//     if (mass[i]%2==0) {
+//         even++
+//         console.log(mass[i]);
+        
+//     }
+// }
+// console.log(`Количество положительны эл-ов: ${pos}
+//             Количество отрицательных эл-ов ${10-pos}`);
+
+
+ 
+//! Задания для самостоятельной работы
+//! Task 1
+
+// let num = 20
+
+// for (let i = 1; i <= num; i++) {
+//     if (i % 2 == 0) {   
+//         console.log(i);
+//     }
+// }
+
+//! Task 2
+// let num = 30
+// for (let i = num; i >= 0; i--) {
+//     if (i % 2 == 1) {
+//         console.log(i);
+//     }
+// }
+
+//! Task 3
+// let user_num = 20
+// for (let i = 0; i < user_num; i++) {
+//     if (user_num % i == 0) {
+//         console.log(i);
+//     }
+// }
+
+//! Task 4
+// let money = 2000
+// let doubleMoney = money*2 
+// let bet = 0.2 // Процентная ставка 20%
+// let year = 0
+
+// for (let i = 0; i < 10; i++) {
+//     money += money * bet
+//     year++
+//     if (money >= doubleMoney) break
+    
+// }
+// let year5 = "лет"
+// let year2 = "года"
+// let year1 = "год"
+// if (year == 1){
+//     console.log(`Вклад увеличится вдвое через ${year} ${year1}`);
+// }
+// else if (year >= 5) {
+//     console.log(`Вклад увеличится вдвое через ${year} ${year5}`);
+// }
+// else (console.log(`Вклад увеличится вдвое через ${year} ${year2}`))
+
+//! Task 5
+// let accum = 0
+// for (let i = 1; i < 20; i++) {
+//     let num = Math.trunc(Math.random()*20)
+//     if (num%4!=0 ) {
+//         console.log(num);
+//         accum++
+//     }
+//     if (accum == 10) {
+//         break
+//     }
+// }
+
+
+//! Функции в JS
+
+function getSum (a:number, b:number) {
+    return (a + b)
+}
+console.log(getSum(3, 5));
+
+let name = "Василий"
+function userName2() {
+    console.log("Привет " + name);
+}
+userName2()
+
+function enterName(name:string) {
+    if (name == "") {
+        return "Поле не может быть пустым"
+    }
+    else if (typeof name !== "string"){
+        return ("У вас введены числа")
+    }
+    return name
+}
+console.log(enterName(""));
