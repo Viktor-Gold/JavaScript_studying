@@ -469,47 +469,6 @@ import './style.css'
 // let month = 0
 // let year = 0
 
-// // let month_name
-// // switch (month) {
-// //     case 1:
-// //         month_name =" января"
-// //         break;
-// //     case 2:
-// //         month_name =" февраля"
-// //         break;
-// //     case 3:
-// //         month_name =" марта"
-// //         break;
-// //     case 4:
-// //         month_name =" апреля"
-// //         break;
-// //     case 5:
-// //         month_name =" мая"
-// //         break;
-// //     case 6:
-// //         month_name =" июня"
-// //         break;
-// //     case 7:
-// //         month_name =" июля"
-// //         break;
-// //     case 8:
-// //         month_name =" августа"
-// //         break;
-// //     case 9:
-// //         month_name =" сентября"
-// //         break;
-// //     case 10:
-// //         month_name =" октября"
-// //         break;
-// //     case 11:
-// //         month_name =" ноября"
-// //         break;
-// //     case 12:
-// //         month_name =" декабря"
-// //         break;
-// // }
-
-
 // if (day <= 0){
 //     alert("Введите корректное цифру: ") //! Нулевой или отрицательный день
 // }
@@ -798,6 +757,7 @@ import './style.css'
 // let number = 123
 // console.log(number.toString().length);
 
+//! DZ
 //! 1 task
 // let num = 10
 // let str = ""
@@ -880,50 +840,49 @@ import './style.css'
 //     }
 //  }
 
-//! Task 1
-// let userNum1 = 5
-// let userNum2 = 20
-// let acc = 0
-// for (let i = userNum1; i < userNum2; i++) {
-//     acc+=i
-//     console.log(acc);
+//! DZ
+//! 1. Подсчитать сумму всех чисел в заданном пользователем диапазоне.
+// let min_num = Number(prompt("Введите минимальное число: "))
+// let min_max = Number(prompt("Введите максимальное число: "))
+// let summa = 0
+
+// for (let i = min_num; i <= min_max; i++) {
+//     summa += i
+//     console.log(summa);
 // }
 
-//! Task 2
-// let first_num = 20
-// let second_num = 4000
-// let massive = []
-// for (let i = 1; i < second_num; i++) {
-//     if (second_num%i==0 && first_num%i==0)
-//     massive.push(i)
+//! 2. Запросить 2 числа и найти только наибольший общий делитель.
+// let num_4 = Number(prompt("Введите первое число: "))
+// let num_5 = Number(prompt("Введите второе число: "))
+// let devider = 0
+// for (let i = 1; i <= num_4; i++) {
+//     if (num_4 % i == 0 && num_5 % i == 0) {
+//         devider = i
+//     }
 // }
-// console.log(Math.max(...massive));
-// console.log(massive[massive.length-1]);
-// console.log(massive.pop());
+// alert(`наибольший делитель чисел ${num_4} и ${num_5} = ` + devider);
 
-//! Task 3
-// let user_number = 50
-// let array = []
-// for (let i = 0; i < user_number; i++) {
-//     if (user_number%i==0) {
-//         array.push(i)
-//     }    
+//! 3. Запросить у пользователя число и вывести все делители этого числа.
+// let num_6 = Number(prompt("Введите число: "))
+// let devider = 1
+// for (let i = 0; i < num_6; i++) {
+//     if (num_6 % devider == 0){
+//         console.log(devider);
+//     }
+//     devider++
 // }
-// console.log(array);
 
-//! Task 4
-// let userNum3 = 1234567 as any
-// // console.log(userNum3.toString().length);
-// userNum3 = "123456789"
-// let accum = 0
-// for (let i = 0; i < userNum3.length; i++) {
-//     accum++
+//! 4. Определить количество цифр в введенном числе.
+// let nums = prompt("Введите число: ") as any
+// let count = 0
+// for (let i = 0; i < nums.length; i++) {
+//     count++
 // }
-// console.log(accum);
+// alert("Количество цифр в числе - " + nums + ": " + count)
 
-//! Task 5
+//! 5. Запросить у пользователя 10 чисел и подсчитать, сколько он ввел положительных, отрицательных и нулей. При этом также посчитать, 
+//! сколько четных и нечетных. Вывести статистику на экран. Учтите, что достаточно одной переменной (не 10) для ввода чисел пользователем.
 // let mass = [1, 5, 4, 6, -1, -9, 10, -8, 0, 3]
-// // console.log(mass[mass.length-1]);
 // let pos = 0
 // let neg = 0
 // let zero = 0
@@ -1012,24 +971,99 @@ import './style.css'
 
 //! Функции в JS
 
-function getSum (a:number, b:number) {
-    return (a + b)
-}
-console.log(getSum(3, 5));
+// function getSum (a:number, b:number) {
+//     return (a + b)
+// }
+// console.log(getSum(3, 5));
 
-let name = "Василий"
-function userName2() {
-    console.log("Привет " + name);
-}
-userName2()
+// let name = "Василий"
+// function userName2() {
+//     console.log("Привет " + name);
+// }
+// userName2()
 
-function enterName(name:string) {
-    if (name == "") {
-        return "Поле не может быть пустым"
+// function enterName(name:string) {
+//     if (name == "") {
+//         return "Поле не может быть пустым"
+//     }
+//     else if (typeof name !== "string"){
+//         return ("У вас введены числа")
+//     }
+//     return name
+// }
+// console.log(enterName(""));
+
+
+//! Home work
+//! 1. Написать функцию, которая принимает 2 числа и возвращает меньшее из них.
+function equality(a:number, b:number) {
+    if (a > b) {
+        return b
     }
-    else if (typeof name !== "string"){
-        return ("У вас введены числа")
+    else if (a < b) {
+        return a 
     }
-    return name
+    else if (a = b) {
+        return `Число ${a} = ${b}`
+    }
+    else ("Введите число!")
 }
-console.log(enterName(""));
+console.log(equality(10, 10));
+
+//! 2. Написать функцию, которая возводит переданное число в указанную степень.
+function pow(a:number, b:number) {
+    return a**b
+}
+console.log(pow(5, 3));
+
+//! 3. Написать функцию, которая принимает 2 числа и знак (+ - * /), считает пример и возвращает результат. 
+// function calculator(a:number, b:number) {
+//     a = Number(prompt("Введите первое число"))
+//     b = Number(prompt("Введите второе число"))
+//     let operator = prompt("Выберите действие: +, -, /, *")
+//     if (operator == "+"){
+//         return alert(a + b)
+//     }
+//     else if (operator == "-"){
+//         return alert(a - b)
+//     }
+//     else if (operator == "/"){
+//         return alert(a / b)
+//     }
+//     else if (operator == "*") {
+//         return alert(a * b)
+//     }
+//     else (alert("Введите один из указанных символов!"))
+// }
+// console.log(calculator());
+
+//! 4. Написать функцию, которая проверяет, является ли переданное ей число простым
+    function numberPrime(a:number) {
+        if (a < 2) {
+            return "Число не простое";
+        }
+        for (let i = 2; i <= Math.sqrt(a); i++) {
+            if (a % i == 0) {
+                return "Число составное";
+            }
+        }
+        return "Число простое";
+    }
+    console.log(numberPrime(9));
+    
+
+//! 5. Написать функцию, которая принимает число и выводит таблицу умножения 
+//! для этого числа. Вызовите функцию для всех чисел от 2 до 9. 
+function multiplyTable(x:number) {  
+if (x >= 2 && x <= 9) {
+        for (let i = 1; i <= 9; i++) {
+        console.log(x*i);
+    } 
+}
+else {
+    return "Введите число от 2 до 9"
+}
+}
+console.log(multiplyTable(2));
+
+
