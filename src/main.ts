@@ -1003,12 +1003,14 @@ function equality(a:number, b:number) {
     else if (a < b) {
         return a 
     }
-    else if (a = b) {
+    else if (a == b) {
         return `Число ${a} = ${b}`
-    }
-    else ("Введите число!")
+    } 
+    else return "Введите число!"
+
+    // return x > y ? y : x тоже решение через тернарный оператор
 }
-console.log(equality(10, 10));
+console.log(equality(1, 21));
 
 //! 2. Написать функцию, которая возводит переданное число в указанную степень.
 function pow(a:number, b:number) {
@@ -1037,33 +1039,149 @@ console.log(pow(5, 3));
 // }
 // console.log(calculator());
 
+//! Решение через оператор switch 
+function calculator(a:number, operator:string, b:number) {
+    switch (operator) {
+        case "+":
+            return a + b
+
+        case "-":
+            return a - b
+    
+        case "/":
+            return a / b
+            
+        case "*":
+            return a * b
+
+        default:
+            return "Введите правильно оператор"
+    }
+}
+console.log(calculator(10, "abc", 12));
+
+
 //! 4. Написать функцию, которая проверяет, является ли переданное ей число простым
+    // function numberPrime(a:number) {
+    //     if (a < 2) {
+    //         return "Число не простое";
+    //     }
+    //     for (let i = 2; i <= Math.sqrt(a); i++) {
+    //         if (a % i == 0) {
+    //             return "Число составное";
+    //         }
+    //     }
+    //     return "Число простое";
+    // }
+    // console.log(numberPrime(9));
+
+    //! Решение 2-ым способом
     function numberPrime(a:number) {
-        if (a < 2) {
-            return "Число не простое";
-        }
-        for (let i = 2; i <= Math.sqrt(a); i++) {
-            if (a % i == 0) {
-                return "Число составное";
+        let accum = 0
+        for (let i = 2; i < a; i++) {
+            if (a%i == 0) {
+                accum++
             }
         }
-        return "Число простое";
+        return accum > 0 ? "Число сложное" : "Число простое"
     }
-    console.log(numberPrime(9));
+    console.log(numberPrime(13));
     
 
 //! 5. Написать функцию, которая принимает число и выводит таблицу умножения 
 //! для этого числа. Вызовите функцию для всех чисел от 2 до 9. 
 function multiplyTable(x:number) {  
-if (x >= 2 && x <= 9) {
+if (typeof x == "number") {
         for (let i = 1; i <= 9; i++) {
         console.log(x*i);
     } 
 }
 else {
-    return "Введите число от 2 до 9"
+    console.log("Введите число!")
 }
 }
-console.log(multiplyTable(2));
+multiplyTable(12)
+
+//! 9.
+// function Task9 (min:number, max:number, bool:boolean) {
+//     for (let min = 0; min < max; min++) {
+//         if (bool == true) {
+//             min
+//         }        
+//     }
+// }
+// console.log(Task9(5, 15, true));
+
+// let min = 5
+// let max = 15
+// let b = "true"
+// for (let min = 0; min < max; min--) {
+//     if (b == "true") {
+        
+//     }        
+// }
 
 
+//! Задания на уроке
+//! Task 4 
+function checkPass(pass:string) {
+    if (pass == "Step" || pass == "Web" || pass == "JavaScript") {
+        return true
+    }
+    return false
+} 
+console.log(checkPass("Web"));
+
+//! Task 5
+function determineSign(x:number) {
+    if (x > 0) {
+        return 1
+    }
+    else if (x < 0){
+        return - 1
+    }
+    else if (x == 0) {
+        return 0
+    }
+    return "Введите число"
+}
+console.log(determineSign(2));
+
+//! Task имя, фамилия и возраст
+function userInfo(name:string, surname:string, age:number) {
+    return `Привет ${name} ${surname} - тебе ${age} лет!`
+}  
+console.log(userInfo("Иван", "Иванов", 24));
+
+//! Task 
+let data = new Date
+function greetUser(name:string) {
+    let hours = data.getHours()
+    if (hours >= 1 && hours < 6 ) {
+        return `Доброй ночи, ${name}`
+    }
+    else if (hours >= 6 && hours < 12 ) {
+        return `Доброе утро, ${name}`
+    }
+    else if (hours >= 12 && hours < 18 ) {
+        return `Добрый день, ${name}`
+    }
+    if (hours >= 18 && hours <= 23 ) {
+        return `Добрый вечер, ${name}`
+    }
+}
+console.log(greetUser("Viktor"));
+// console.log(`Текущее время: ${data.getHours()} часов и ${data.getMinutes()} минут`);
+
+let accum = 0
+// setInterval(() => {
+//     accum++
+//     if (accum > 10) {
+
+//     }
+//     console.log(accum);
+// }, 1000)
+
+setTimeout(() => {
+    console.log("Привет Вася");
+}, 2000);
