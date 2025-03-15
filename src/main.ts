@@ -469,47 +469,6 @@ import './style.css'
 // let month = 0
 // let year = 0
 
-// // let month_name
-// // switch (month) {
-// //     case 1:
-// //         month_name =" января"
-// //         break;
-// //     case 2:
-// //         month_name =" февраля"
-// //         break;
-// //     case 3:
-// //         month_name =" марта"
-// //         break;
-// //     case 4:
-// //         month_name =" апреля"
-// //         break;
-// //     case 5:
-// //         month_name =" мая"
-// //         break;
-// //     case 6:
-// //         month_name =" июня"
-// //         break;
-// //     case 7:
-// //         month_name =" июля"
-// //         break;
-// //     case 8:
-// //         month_name =" августа"
-// //         break;
-// //     case 9:
-// //         month_name =" сентября"
-// //         break;
-// //     case 10:
-// //         month_name =" октября"
-// //         break;
-// //     case 11:
-// //         month_name =" ноября"
-// //         break;
-// //     case 12:
-// //         month_name =" декабря"
-// //         break;
-// // }
-
-
 // if (day <= 0){
 //     alert("Введите корректное цифру: ") //! Нулевой или отрицательный день
 // }
@@ -798,6 +757,7 @@ import './style.css'
 // let number = 123
 // console.log(number.toString().length);
 
+//! DZ
 //! 1 task
 // let num = 10
 // let str = ""
@@ -880,50 +840,49 @@ import './style.css'
 //     }
 //  }
 
-//! Task 1
-// let userNum1 = 5
-// let userNum2 = 20
-// let acc = 0
-// for (let i = userNum1; i < userNum2; i++) {
-//     acc+=i
-//     console.log(acc);
+//! DZ
+//! 1. Подсчитать сумму всех чисел в заданном пользователем диапазоне.
+// let min_num = Number(prompt("Введите минимальное число: "))
+// let min_max = Number(prompt("Введите максимальное число: "))
+// let summa = 0
+
+// for (let i = min_num; i <= min_max; i++) {
+//     summa += i
+//     console.log(summa);
 // }
 
-//! Task 2
-// let first_num = 20
-// let second_num = 4000
-// let massive = []
-// for (let i = 1; i < second_num; i++) {
-//     if (second_num%i==0 && first_num%i==0)
-//     massive.push(i)
+//! 2. Запросить 2 числа и найти только наибольший общий делитель.
+// let num_4 = Number(prompt("Введите первое число: "))
+// let num_5 = Number(prompt("Введите второе число: "))
+// let devider = 0
+// for (let i = 1; i <= num_4; i++) {
+//     if (num_4 % i == 0 && num_5 % i == 0) {
+//         devider = i
+//     }
 // }
-// console.log(Math.max(...massive));
-// console.log(massive[massive.length-1]);
-// console.log(massive.pop());
+// alert(`наибольший делитель чисел ${num_4} и ${num_5} = ` + devider);
 
-//! Task 3
-// let user_number = 50
-// let array = []
-// for (let i = 0; i < user_number; i++) {
-//     if (user_number%i==0) {
-//         array.push(i)
-//     }    
+//! 3. Запросить у пользователя число и вывести все делители этого числа.
+// let num_6 = Number(prompt("Введите число: "))
+// let devider = 1
+// for (let i = 0; i < num_6; i++) {
+//     if (num_6 % devider == 0){
+//         console.log(devider);
+//     }
+//     devider++
 // }
-// console.log(array);
 
-//! Task 4
-// let userNum3 = 1234567 as any
-// // console.log(userNum3.toString().length);
-// userNum3 = "123456789"
-// let accum = 0
-// for (let i = 0; i < userNum3.length; i++) {
-//     accum++
+//! 4. Определить количество цифр в введенном числе.
+// let nums = prompt("Введите число: ") as any
+// let count = 0
+// for (let i = 0; i < nums.length; i++) {
+//     count++
 // }
-// console.log(accum);
+// alert("Количество цифр в числе - " + nums + ": " + count)
 
-//! Task 5
+//! 5. Запросить у пользователя 10 чисел и подсчитать, сколько он ввел положительных, отрицательных и нулей. При этом также посчитать, 
+//! сколько четных и нечетных. Вывести статистику на экран. Учтите, что достаточно одной переменной (не 10) для ввода чисел пользователем.
 // let mass = [1, 5, 4, 6, -1, -9, 10, -8, 0, 3]
-// // console.log(mass[mass.length-1]);
 // let pos = 0
 // let neg = 0
 // let zero = 0
@@ -1012,24 +971,375 @@ import './style.css'
 
 //! Функции в JS
 
-function getSum (a:number, b:number) {
-    return (a + b)
-}
-console.log(getSum(3, 5));
+// function getSum (a:number, b:number) {
+//     return (a + b)
+// }
+// console.log(getSum(3, 5));
 
-let name = "Василий"
-function userName2() {
-    console.log("Привет " + name);
-}
-userName2()
+// let name = "Василий"
+// function userName2() {
+//     console.log("Привет " + name);
+// }
+// userName2()
 
-function enterName(name:string) {
-    if (name == "") {
-        return "Поле не может быть пустым"
-    }
-    else if (typeof name !== "string"){
-        return ("У вас введены числа")
-    }
-    return name
+// function enterName(name:string) {
+//     if (name == "") {
+//         return "Поле не может быть пустым"
+//     }
+//     else if (typeof name !== "string"){
+//         return ("У вас введены числа")
+//     }
+//     return name
+// }
+// console.log(enterName(""));
+
+
+//! Home work
+//! 1. Написать функцию, которая принимает 2 числа и возвращает меньшее из них.
+// function equality(a:number, b:number) {
+//     if (a > b) {
+//         return b
+//     }
+//     else if (a < b) {
+//         return a 
+//     }
+//     else if (a == b) {
+//         return `Число ${a} = ${b}`
+//     } 
+//     else return "Введите число!"
+
+    // return x > y ? y : x тоже решение через тернарный оператор
+// }
+// console.log(equality(1, 21));
+
+//! 2. Написать функцию, которая возводит переданное число в указанную степень.
+// function pow(a:number, b:number) {
+//     return a**b
+// }
+// console.log(pow(5, 3));
+
+//! 3. Написать функцию, которая принимает 2 числа и знак (+ - * /), считает пример и возвращает результат. 
+// function calculator(a:number, b:number) {
+//     a = Number(prompt("Введите первое число"))
+//     b = Number(prompt("Введите второе число"))
+//     let operator = prompt("Выберите действие: +, -, /, *")
+//     if (operator == "+"){
+//         return alert(a + b)
+//     }
+//     else if (operator == "-"){
+//         return alert(a - b)
+//     }
+//     else if (operator == "/"){
+//         return alert(a / b)
+//     }
+//     else if (operator == "*") {
+//         return alert(a * b)
+//     }
+//     else (alert("Введите один из указанных символов!"))
+// }
+// console.log(calculator());
+
+//! Решение через оператор switch 
+// function calculator(a:number, operator:string, b:number) {
+//     switch (operator) {
+//         case "+":
+//             return a + b
+
+//         case "-":
+//             return a - b
+    
+//         case "/":
+//             return a / b
+            
+//         case "*":
+//             return a * b
+
+//         default:
+//             return "Введите правильно оператор"
+//     }
+// }
+// console.log(calculator(10, "abc", 12));
+
+
+//! 4. Написать функцию, которая проверяет, является ли переданное ей число простым
+    // function numberPrime(a:number) {
+    //     if (a < 2) {
+    //         return "Число не простое";
+    //     }
+    //     for (let i = 2; i <= Math.sqrt(a); i++) {
+    //         if (a % i == 0) {
+    //             return "Число составное";
+    //         }
+    //     }
+    //     return "Число простое";
+    // }
+    // console.log(numberPrime(9));
+
+    //! Решение 2-ым способом
+    // function numberPrime(a:number) {
+    //     let accum = 0
+    //     for (let i = 2; i < a; i++) {
+    //         if (a%i == 0) {
+    //             accum++
+    //         }
+    //     }
+    //     return accum > 0 ? "Число сложное" : "Число простое"
+    // }
+    // console.log(numberPrime(13));
+    
+
+//! 5. Написать функцию, которая принимает число и выводит таблицу умножения 
+//! для этого числа. Вызовите функцию для всех чисел от 2 до 9. 
+// function multiplyTable(x:number) {  
+// if (typeof x == "number") {
+//         for (let i = 1; i <= 9; i++) {
+//         console.log(x*i);
+//     } 
+// }
+// else {
+//     console.log("Введите число!")
+// }
+// }
+// multiplyTable(12)
+
+//! 9.
+// function Task9 (min:number, max:number, bool:boolean) {
+//     for (let min = 0; min < max; min++) {
+//         if (bool == true) {
+//             min
+//         }        
+//     }
+// }
+// console.log(Task9(5, 15, true));
+
+// let min = 5
+// let max = 15
+// let b = "true"
+// for (let min = 0; min < max; min--) {
+//     if (b == "true") {
+        
+//     }        
+// }
+
+
+//! Задания на уроке
+//! Task 4 
+// function checkPass(pass:string) {
+//     if (pass == "Step" || pass == "Web" || pass == "JavaScript") {
+//         return true
+//     }
+//     return false
+// } 
+// console.log(checkPass("Web"));
+
+//! Task 5
+// function determineSign(x:number) {
+//     if (x > 0) {
+//         return 1
+//     }
+//     else if (x < 0){
+//         return - 1
+//     }
+//     else if (x == 0) {
+//         return 0
+//     }
+//     return "Введите число"
+// }
+// console.log(determineSign(2));
+
+//! Task имя, фамилия и возраст
+// function userInfo(name:string, surname:string, age:number) {
+//     return `Привет ${name} ${surname} - тебе ${age} лет!`
+// }  
+// console.log(userInfo("Иван", "Иванов", 24));
+
+//! Task 
+// let data = new Date
+// function greetUser(name:string) {
+//     let hours = data.getHours()
+//     if (hours >= 1 && hours < 6 ) {
+//         return `Доброй ночи, ${name}`
+//     }
+//     else if (hours >= 6 && hours < 12 ) {
+//         return `Доброе утро, ${name}`
+//     }
+//     else if (hours >= 12 && hours < 18 ) {
+//         return `Добрый день, ${name}`
+//     }
+//     if (hours >= 18 && hours <= 23 ) {
+//         return `Добрый вечер, ${name}`
+//     }
+// }
+// console.log(greetUser("Viktor"));
+// console.log(`Текущее время: ${data.getHours()} часов и ${data.getMinutes()} минут`);
+
+// let accum = 0
+// setInterval(() => {
+//     accum++
+//     if (accum > 10) {
+
+//     }
+//     console.log(accum);
+// }, 1000)
+
+// setTimeout(() => {
+//     console.log("Привет Вася");
+// }, 2000);
+
+
+//! HOME WORK
+//! 6. Написать функцию, которая реализует работу оператора %. Функция принимает 2 параметра 
+//! и возвращает остаток от деления первого параметра на второй. 
+//! В функции использовать только + - * /, оператор % не использовать.   
+
+// function remainderDivision(a:number, b:number) {
+//     return Math.trunc(a/b)
+// }
+// console.log(remainderDivision(28, 6));
+
+//! 7. Написать функцию, которая принимает от 1 до 5 чисел и возвращает их сумму.
+// function sumNumber(a:number, b=0, c=0, d=0, e=0) {
+//     if (typeof b === "string" || typeof c === "string" 
+//         || typeof d === "string" || typeof e === "string") {
+//         return "Введите число!"
+//     }
+//     if (typeof a === "number") {
+//         return (a+b+c+d+e)
+//     }
+//     return "Введите число!"
+// }
+// console.log(sumNumber(1, 2, 2, 1));
+
+//! 8. Написать функцию, которая принимает от 1 до 5 чисел и возвращает большее из них. 
+// function greaterNum(a=0, b=0, c=0, d=0, e=0) {
+//     let massive = [a, b, c, d, e]
+//     return Math.max(...massive);
+// }
+// console.log(greaterNum(7, 5, 2, 8, 9));
+
+//! 9. Написать функцию, которая выводит все четные или нечетные числа, в указанном пользователем диапазоне. Какие
+//! числа выводить, определяется третьим параметром типа bool (true – четные, false – нечетные).
+
+// function evenOdd(diapazone1=0, diapazone2=0, bool:boolean) {
+//     for (let i = diapazone1; i <= diapazone2; i++) {
+//        if (bool == true) {
+//         if (i % 2 == 0){
+//             console.log(i);
+            
+//         }
+//        }
+//        else {
+//         if (i % 2 != 0) {
+//             console.log(i);
+//         }
+//        }
+//     }
+// }
+// evenOdd(9, 22, false);
+
+//!10. Написать функцию, которая принимает дату (день, месяц, год) 
+//! и возвращает дату следующего дня в виде строки «дд.мм.гггг». 
+//! Проверку на високосный год желательно написать отдельной функцией.
+function dateTomorrow(day:number, month:number, year:number) {
+
+if (day <= 0){
+    return "Введите корректное цифру: " //! Нулевой или отрицательный день
 }
-console.log(enterName(""));
+
+//! Последний день февраля високосного и не високосного года 
+else if (day == 28 && month == 2){
+    if (year <= 0 || typeof year !== "number"){
+        return "Введите корректный год" 
+    }
+    else if (year %4!=0){
+        day = 1
+        month = 3
+        return "Завтра: " + day + "." + month + "." + year
+    }
+    else if (year %4==0){
+        day += 1
+        return "Завтра: " + day + "." + month + "." + year
+    }
+    
+}
+
+//! Последний день 30-дневных месяцев
+else if (day == 30) {
+    day = 1
+    if (month == 2){
+        return "В феврале не может быть больше 29 дней"
+    }
+    else if (month == 4 || month == 6 || month == 9 || month == 11) { //! Новый месяц
+        month += 1
+        if (year > 0){
+            return "Завтра: " + day + "." + month + "." + year
+        }
+        else return "Введите корректный год"
+    }
+    else if (month >= 1 && month <= 12) { //! Все календарные дни
+        day = 31
+        if (year > 0){
+            return "Завтра: " + day + "." + month + "." + year
+        }
+        else return "Введите корректный год"
+    }  
+    else return "Введите корректный месяц"
+}
+
+else if (day <= 30){
+    if (month == 2 && day >= 30){
+        return "В феврале не может быть больше 29 дней"
+    }
+
+    else if (day == 29 && month == 2) { //! Високосный год
+        if (year%4==0) {
+            day = 1
+            month = 3
+            return "Завтра: " + day + "." + month + "." + year
+        }
+        else if (year <=0) {
+            return "Введите корректный год"
+        }
+        else return "В " + year + " году в феврале 28 дней!"
+    }
+
+    else if (month >= 1 && month <= 12 && day <= 30) { //! Все календарные дни
+        day += 1
+        if (year > 0){
+            return "Завтра: " + day + "." + month + "." + year
+        }
+        else return "Введите корректный год"
+    }  
+    else return "Введите корректный месяц"
+}
+
+//! Последний день 31-дневных месяцев
+else if (day == 31) {
+    day = 1
+    if (month == 2){
+        return "В феврале не может быть больше 29 дней"
+    }
+    else if (month == 12) { //! Новый год
+        if (year > 0){
+            year += 1
+            month = 1
+            return "Завтра: " + day + "." + month + "." + year
+        }
+        else return "Введите корректный год"
+    }
+    else if (month == 1 || month == 3 || month == 5 || month == 7 || month == 8 || month == 10 || month == 12) { //! Новый месяц
+        month += 1
+        if (year > 0){
+            return "Завтра: " + day + "." + month + "." + year
+        }
+        else return "Введите корректный год"
+    }
+    else if (month == 2 || month == 4 || month == 6 || month == 9 || month == 11) {
+        return "В этом месяце 30 дней!"
+    }
+    else return "Введите корректны месяц"
+}
+else return "Введите корректное число: "
+}
+console.log(dateTomorrow(29, 2, 2024));
+
