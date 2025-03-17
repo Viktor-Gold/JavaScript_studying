@@ -1211,11 +1211,11 @@ import './style.css'
 // console.log(sumNumber(1, 2, 2, 1));
 
 //! 8. Написать функцию, которая принимает от 1 до 5 чисел и возвращает большее из них. 
-// function greaterNum(a=0, b=0, c=0, d=0, e=0) {
+// function greaterNum(a=0, b=0, c=0, d=0, e=-Infinity) {
 //     let massive = [a, b, c, d, e]
 //     return Math.max(...massive);
 // }
-// console.log(greaterNum(7, 5, 2, 8, 9));
+// console.log(greaterNum(-6, -5, -2, -8));
 
 //! 9. Написать функцию, которая выводит все четные или нечетные числа, в указанном пользователем диапазоне. Какие
 //! числа выводить, определяется третьим параметром типа bool (true – четные, false – нечетные).
@@ -1225,9 +1225,8 @@ import './style.css'
 //        if (bool == true) {
 //         if (i % 2 == 0){
 //             console.log(i);
-            
 //         }
-//        }
+//        } 
 //        else {
 //         if (i % 2 != 0) {
 //             console.log(i);
@@ -1240,106 +1239,131 @@ import './style.css'
 //!10. Написать функцию, которая принимает дату (день, месяц, год) 
 //! и возвращает дату следующего дня в виде строки «дд.мм.гггг». 
 //! Проверку на високосный год желательно написать отдельной функцией.
-function dateTomorrow(day:number, month:number, year:number) {
-
-if (day <= 0){
-    return "Введите корректное цифру: " //! Нулевой или отрицательный день
-}
-
-//! Последний день февраля високосного и не високосного года 
-else if (day == 28 && month == 2){
-    if (year <= 0 || typeof year !== "number"){
-        return "Введите корректный год" 
-    }
-    else if (year %4!=0){
-        day = 1
-        month = 3
-        return "Завтра: " + day + "." + month + "." + year
-    }
-    else if (year %4==0){
-        day += 1
-        return "Завтра: " + day + "." + month + "." + year
-    }
+// function dateTomorrow(day:number, month:number, year:number) {
     
+
+// if (day <= 0){
+//     return "Введите корректное цифру: " //! Нулевой или отрицательный день
+// }
+// if (year <= 0) {
+//     return "else"
+// }
+
+// //! Последний день февраля високосного и не високосного года 
+// else if (day == 28 && month == 2){
+//     if (year <= 0 || typeof year !== "number"){
+//         return "Введите корректный год" 
+//     }
+//     else if (year %4!=0){
+//         day = 1
+//         month = 3
+//         return "Завтра: " + day + "." + month + "." + year
+//     }
+//     else if (year %4==0){
+//         day += 1
+//         return "Завтра: " + day + "." + month + "." + year
+//     }
+    
+// }
+
+// //! Последний день 30-дневных месяцев
+// else if (day == 30) {
+//     day = 1
+//     if (month == 2){
+//         return "В феврале не может быть больше 29 дней"
+//     }
+//     else if (month == 4 || month == 6 || month == 9 || month == 11) { //! Новый месяц
+//         month += 1
+//         if (year > 0){
+//             return "Завтра: " + day + "." + month + "." + year
+//         }
+//         else return "Введите корректный год"
+//     }
+//     else if (month >= 1 && month <= 12) { //! Все календарные дни
+//         day = 31
+//         if (year > 0){
+//             return "Завтра: " + day + "." + month + "." + year
+//         }
+//         else return "Введите корректный год"
+//     }  
+//     else return "Введите корректный месяц"
+// }
+
+// else if (day <= 30){
+//     if (month == 2 && day >= 30){
+//         return "В феврале не может быть больше 29 дней"
+//     }
+
+//     else if (day == 29 && month == 2) { //! Високосный год
+//         if (year%4==0) {
+//             day = 1
+//             month = 3
+//             return "Завтра: " + day + "." + month + "." + year
+//         }
+//         else if (year <=0) {
+//             return "Введите корректный год"
+//         }
+//         else return "В " + year + " году в феврале 28 дней!"
+//     }
+
+//     else if (month >= 1 && month <= 12 && day <= 30) { //! Все календарные дни
+//         day += 1
+//         if (year > 0){
+//             return "Завтра: " + day + "." + month + "." + year
+//         }
+//         else return "Введите корректный год"
+//     }  
+//     else return "Введите корректный месяц"
+// }
+
+// //! Последний день 31-дневных месяцев
+// else if (day == 31) {
+//     day = 1
+//     if (month == 2){
+//         return "В феврале не может быть больше 29 дней"
+//     }
+//     else if (month == 12) { //! Новый год
+//         if (year > 0){
+//             year += 1
+//             month = 1
+//             return "Завтра: " + day + "." + month + "." + year
+//         }
+//         else return "Введите корректный год"
+//     }
+//     else if (month == 1 || month == 3 || month == 5 || month == 7 || month == 8 || month == 10 || month == 12) { //! Новый месяц
+//         month += 1
+//         if (year > 0){
+//             return "Завтра: " + day + "." + month + "." + year
+//         }
+//         else return "Введите корректный год"
+//     }
+//     else if (month == 2 || month == 4 || month == 6 || month == 9 || month == 11) {
+//         return "В этом месяце 30 дней!"
+//     }
+//     else return "Введите корректны месяц"
+// }
+// else return "Введите корректное число: "
+// }
+// console.log(dateTomorrow(29, 2, -2024));
+
+
+//! Рекурсии
+// Первый способ решения задачи (через цикл)
+function reizeNumberInPow(num1:number, pow:number) {
+    let result = 1
+    for (let i = 1; i <= pow; i++) {
+        result *= num1
+    }
+    return result
 }
-
-//! Последний день 30-дневных месяцев
-else if (day == 30) {
-    day = 1
-    if (month == 2){
-        return "В феврале не может быть больше 29 дней"
+console.log(reizeNumberInPow(5, 3));
+// Второй способ решения задачи (через рекурсию)
+function reizeNumberInPow2(num:number, pow:number):any {
+    if (pow == 1) {
+        return num
     }
-    else if (month == 4 || month == 6 || month == 9 || month == 11) { //! Новый месяц
-        month += 1
-        if (year > 0){
-            return "Завтра: " + day + "." + month + "." + year
-        }
-        else return "Введите корректный год"
+    else {
+        return num*reizeNumberInPow2(num, pow-1 )
     }
-    else if (month >= 1 && month <= 12) { //! Все календарные дни
-        day = 31
-        if (year > 0){
-            return "Завтра: " + day + "." + month + "." + year
-        }
-        else return "Введите корректный год"
-    }  
-    else return "Введите корректный месяц"
 }
-
-else if (day <= 30){
-    if (month == 2 && day >= 30){
-        return "В феврале не может быть больше 29 дней"
-    }
-
-    else if (day == 29 && month == 2) { //! Високосный год
-        if (year%4==0) {
-            day = 1
-            month = 3
-            return "Завтра: " + day + "." + month + "." + year
-        }
-        else if (year <=0) {
-            return "Введите корректный год"
-        }
-        else return "В " + year + " году в феврале 28 дней!"
-    }
-
-    else if (month >= 1 && month <= 12 && day <= 30) { //! Все календарные дни
-        day += 1
-        if (year > 0){
-            return "Завтра: " + day + "." + month + "." + year
-        }
-        else return "Введите корректный год"
-    }  
-    else return "Введите корректный месяц"
-}
-
-//! Последний день 31-дневных месяцев
-else if (day == 31) {
-    day = 1
-    if (month == 2){
-        return "В феврале не может быть больше 29 дней"
-    }
-    else if (month == 12) { //! Новый год
-        if (year > 0){
-            year += 1
-            month = 1
-            return "Завтра: " + day + "." + month + "." + year
-        }
-        else return "Введите корректный год"
-    }
-    else if (month == 1 || month == 3 || month == 5 || month == 7 || month == 8 || month == 10 || month == 12) { //! Новый месяц
-        month += 1
-        if (year > 0){
-            return "Завтра: " + day + "." + month + "." + year
-        }
-        else return "Введите корректный год"
-    }
-    else if (month == 2 || month == 4 || month == 6 || month == 9 || month == 11) {
-        return "В этом месяце 30 дней!"
-    }
-    else return "Введите корректны месяц"
-}
-else return "Введите корректное число: "
-}
-console.log(dateTomorrow(29, 2, 2024));
-
+console.log(reizeNumberInPow2(5, 3));
