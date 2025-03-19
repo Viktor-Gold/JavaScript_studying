@@ -1349,21 +1349,158 @@ import './style.css'
 
 //! Рекурсии
 // Первый способ решения задачи (через цикл)
-function reizeNumberInPow(num1:number, pow:number) {
-    let result = 1
-    for (let i = 1; i <= pow; i++) {
-        result *= num1
-    }
-    return result
+// function reizeNumberInPow(num1:number, pow:number) {
+//     let result = 1
+//     for (let i = 1; i <= pow; i++) {
+//         result *= num1
+//     }
+//     return result
+// }
+// console.log(reizeNumberInPow(5, 3));
+// // Второй способ решения задачи (через рекурсию)
+// function reizeNumberInPow2(num:number, pow:number):any {
+//     if (pow == 1) {
+//         return num
+//     }
+//     else {
+//         return num*reizeNumberInPow2(num, pow-1 )
+//     }
+// }
+// console.log(reizeNumberInPow2(5, 3));
+
+//! 1. Факториал числа
+// function calculateFactorial(num:number):any {
+//     if (num == 1) {
+//         return num
+//     }
+//     else {
+//         return num * calculateFactorial(num-1)
+//     }
+// }
+// console.log(calculateFactorial(1));
+// console.log(calculateFactorial(3));
+// console.log(calculateFactorial(5));
+
+//! 2. Выводит все числа из диапозона в прямом порядке
+//! и функцию, которая выводит в обратном порядке
+// function showDiapazone(num1:number, num2:number):any {
+//     if (num1 == num2) {
+//         return num1
+//     }
+//     else{
+//         return num1 + ", " + showDiapazone(num1+=1, num2 )
+//     }
+// }
+// console.log(showDiapazone(2, 10));
+// console.log(showDiapazone(3, 3));
+
+// function showDiapazoneRevers(num1:number, num2:number):any {
+//     if (num1 == num2) {
+//         return num1
+//     }
+//     else{
+//         return num2 + ", " + showDiapazoneRevers(num1, num2-=1 )
+//     }
+// }
+// console.log(showDiapazoneRevers(2, 10));
+// console.log(showDiapazoneRevers(3, 3));
+
+//! 3. Выводит переданное ей число задом на перед.
+// console.log(String(1234));
+// console.log(Number((String(1234).split('').reverse().join(''))));
+
+// function reversNumber(x:number):any {
+//     if (x < 10) {
+//         return x
+//     }
+//     else {
+//         return x % 10 + "" + reversNumber(Math.trunc((x/10)))
+//     }
+// }
+// console.log(reversNumber(2));
+// console.log(reversNumber(53));
+// console.log(reversNumber(100));
+
+//! 4. Функция, которая считает сумму цифр числа.
+// function calculateSumm(num1:number):any {
+//     if (num1 < 10) {
+//         return num1
+//     }
+//     else {
+//         return num1 % 10 + calculateSumm(Math.trunc(num1/10))
+//     }
+// }
+// console.log(calculateSumm(4));
+// console.log(calculateSumm(165));
+
+//! 5. Функция, которая принимает число и выводит соответсвующее 
+//! количество вложенных пар круглых скобок. Например: число 4 - (((()))) 
+// function showStaples(y:number):any {
+//     if (y == 1) {
+//         return "()"
+//     }
+//     else {
+//         return "(" + showStaples(y-1) + ")"
+//     }
+// }
+// console.log(showStaples(1));
+// console.log(showStaples(4));
+
+
+// ! Объекты
+let user = {
+    name: "Katya",
+    age: 26,
+    sity: "Sochi",
+    month: "Marth",
+    6: "ключ-число приоритетнее строк",
+    1: "Чем меньше число тем больше приоритет"
 }
-console.log(reizeNumberInPow(5, 3));
-// Второй способ решения задачи (через рекурсию)
-function reizeNumberInPow2(num:number, pow:number):any {
-    if (pow == 1) {
-        return num
-    }
-    else {
-        return num*reizeNumberInPow2(num, pow-1 )
-    }
+console.log(user);
+console.log(user.name);
+console.log(user.sity);
+
+user.age = 25
+console.log(user.age);
+
+delete user.sity
+console.log(user);
+
+console.log('age' in user);
+
+for (const key in user) {
+    console.log(key + " : " + user[key]);
 }
-console.log(reizeNumberInPow2(5, 3));
+
+
+//! Home Work____________________ 
+//! Task 1 
+let car = {
+    model: "Mitsubishi",
+    year: 2007,
+    speed: 110
+} 
+
+//! Task 2
+let obj1 = {
+    numerator: 2,
+    denumerator: 3
+} 
+
+let obj2 = {
+    numerator: 4,
+    denumerator: 5
+} 
+console.log(obj1);
+console.log(obj2);
+
+//! Task 3
+let time = {
+    hours: 15,
+    minutes: 20,
+    seconds: 19
+} 
+console.log(time);
+
+
+
